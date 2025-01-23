@@ -1,9 +1,22 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const audio = new Audio('./audio/mariosom.mp3');
+audio.volume = 0.2;
+audio.loop = true;
+audio.play();
+
+let score = 0;
+const scoreDisplay = document.getElementById('score');
+
+const updateScore = () => {
+    score++;
+    scoreDisplay.textContent = `Pontos: ${score}`;
+}
 
 
-const jmp = () => {
+const jump = () => {
     mario.classList.add('jump');
+    updateScore();
 
     setTimeout(() => {
 
@@ -27,6 +40,11 @@ const loop = setInterval(() => {
         mario.src = './images/game-over.png';
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
+
+        audio.pause();
+
+        const gameOverAudio = new Audio('./audio/mariogame-over song.mp3');
+        gameOverAudio.play();
 
         clearInterval(loop);
     }
