@@ -78,3 +78,39 @@
     }
 }
 
+.tela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 20px;
+}
+.tela img{
+    width: 600px;
+
+}
+.tela .botao{
+    background-color: green;
+    color: white;
+    padding: 10px 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: green; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
